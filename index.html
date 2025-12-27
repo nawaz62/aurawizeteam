@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic setup -->
+  <meta charset="UTF-8">
+  <title>GearGuard – Maintenance System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN BOX ================= -->
+<div id="loginBox" class="auth-box">
+  <h2>Login</h2>
+
+  <!-- User inputs -->
+  <input id="loginEmail" placeholder="Enter Email">
+  <input id="loginPass" type="password" placeholder="Enter Password">
+
+  <!-- Action -->
+  <button onclick="login()">Login</button>
+
+  <p onclick="toggleAuth()">Create new account</p>
+</div>
+
+<!-- ================= SIGNUP BOX ================= -->
+<div id="signupBox" class="auth-box hidden">
+  <h2>Signup</h2>
+
+  <input id="signupEmail" placeholder="Enter Email">
+  <input id="signupPass" type="password" placeholder="Create Password">
+
+  <button onclick="signup()">Signup</button>
+
+  <p onclick="toggleAuth()">Back to Login</p>
+</div>
+
+<!-- ================= MAIN APP ================= -->
+<div id="app" class="hidden">
+
+<header>
+  <h3>GearGuard</h3>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showPage('dashboard')">Dashboard</button>
+    <button onclick="showPage('requests')">Requests</button>
+    <button onclick="showPage('calendar')">Calendar</button>
+    <button onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<!-- ========== DASHBOARD PAGE ========== -->
+<section id="dashboard">
+  <div class="card">
+    Open Requests:
+    <b id="openCount">0</b>
+  </div>
+</section>
+
+<!-- ========== REQUESTS PAGE ========== -->
+<section id="requests" class="hidden">
+  <h3>Create Maintenance Request</h3>
+
+  <input id="reqTitle" placeholder="Request Title">
+
+  <select id="reqType">
+    <option>Corrective</option>
+    <option>Preventive</option>
+  </select>
+
+  <input type="date" id="reqDate">
+
+  <button onclick="addRequest()">Create Request</button>
+
+  <!-- Kanban Board -->
+  <div class="kanban">
+    <div>
+      <h4>New</h4>
+      <div id="New"></div>
+    </div>
+
+    <div>
+      <h4>In Progress</h4>
+      <div id="In Progress"></div>
+    </div>
+
+    <div>
+      <h4>Done</h4>
+      <div id="Done"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALENDAR PAGE ========== -->
+<section id="calendar" class="hidden">
+  <h3>Preventive Maintenance Calendar</h3>
+  <div id="calendarGrid" class="calendar"></div>
+</section>
+
+</div>
+
+<!-- JavaScript Files -->
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+<script src="js/calendar.js"></script>
+
+</body>
+</html>

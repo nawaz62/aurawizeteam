@@ -1,0 +1,98 @@
+/* General page design */
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+}
+
+/* Hide elements */
+.hidden{
+  display:none;
+}
+
+/* Login & Signup box */
+.auth-box{
+  width:320px;
+  margin:100px auto;
+  background:white;
+  padding:20px;
+  border-radius:8px;
+}
+
+/* Inputs and buttons */
+input, select, button{
+  width:100%;
+  padding:8px;
+  margin:6px 0;
+}
+
+/* Primary button */
+button{
+  background:#4f46e5;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* Header bar */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:white;
+}
+
+/* Navigation buttons */
+nav button{
+  width:auto;
+  margin-right:5px;
+}
+
+/* Dashboard cards */
+.card{
+  background:white;
+  margin:15px;
+  padding:15px;
+  border-left:5px solid #4f46e5;
+}
+
+/* Kanban layout */
+.kanban{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.kanban div{
+  background:#e5e7eb;
+  padding:10px;
+}
+
+/* Individual task card */
+.task{
+  background:white;
+  margin:5px 0;
+  padding:5px;
+  cursor:pointer;
+}
+
+/* Calendar layout */
+.calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:5px;
+}
+
+/* Single day */
+.day{
+  background:white;
+  height:80px;
+  padding:5px;
+}
+
+/* Preventive event */
+.event{
+  background:#f59e0b;
+  color:white;
+  font-size:12px;
+}
